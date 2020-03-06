@@ -1,7 +1,4 @@
-require 'pry'
-
 app = proc do |a|
-
   requested_file = if a["PATH_INFO"] == "/"
                      "index.html"
                    else
@@ -10,4 +7,4 @@ app = proc do |a|
   [200, {}, [File.read(requested_file)]]
 end
 
-run  app
+run app
