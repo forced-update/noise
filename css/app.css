@@ -104,3 +104,12 @@ header nav a {
     margin: 1rem;
   }
 }
+
+
+/* app specific */
+
+body {
+  background-image: url("images/lake_panorama.jpeg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
