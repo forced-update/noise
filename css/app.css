@@ -109,7 +109,7 @@ header nav a {
 /* app specific */
 
 body {
-  background-image: url("images/lake_panorama.jpeg");
+  background-image: url("../images/lake_panorama.jpeg");
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
