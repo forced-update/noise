@@ -1,20 +1,18 @@
-// select our play button
-const playButton = document.querySelector('button#camping-sound-control');
-
 var sound = new Howl({
   src: ["audio/campfire_noise.ogg"],
   loop: true,
   volume: 0.9
 });
 
-playButton.addEventListener('click', function() {
-    // play or pause track depending on state
-    if (this.dataset.playing === 'false') {
-        sound.play();
-        this.dataset.playing = 'true';
-    } else if (this.dataset.playing === 'true') {
-        sound.pause();
-        this.dataset.playing = 'false';
+var playing = false;
+document.addEventListener('keyup', function(e){
+    if(e.keyCode == 32) {
+        if (playing == false) {
+            playing = true;
+            sound.play();
+        } else {
+            playing = false;
+            sound.pause();
+        }
     }
-
 }, false);
